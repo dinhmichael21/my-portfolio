@@ -1,0 +1,455 @@
+:root {
+    /* Color Palette */
+    --primary-bg: #f9f5f0;         /* Soft tan background */
+    --text-dark: #2d3436;          /* Dark gray for text */
+    --text-light: #636e72;         /* Lighter gray for secondary text */
+    --accent-blue: #7ec4fd;        /* Bright light blue */
+    --accent-pink: #ffc9c9;        /* Soft pastel pink */
+    --accent-green: #d8f5a2;       /* Soft pastel green */
+    --card-bg: #ffffff;            /* Pure white for cards */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /* Layout Structure */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Side spacing */
+  }
+  
+  /* Header */
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+  }
+  
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--accent-blue);
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 4rem 0;
+  }
+  
+  .hero-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .visual-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-blue);
+    font-weight: 800;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .about-me {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    max-width: 600px;
+  }
+  
+  /* Image Container */
+  .img-container {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent-blue);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Stats Container */
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--accent-blue);
+  }
+  
+  .stat-item i {
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+  }
+  
+  /* Buttons */
+  .cta-buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .primary-button, .secondary-button {
+    padding: 0.9rem 1.8rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-button {
+    background-color: var(--accent-blue);
+    color: white;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .secondary-button {
+    border: 2px solid var(--accent-blue);
+    color: var(--accent-blue);
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .secondary-button:hover {
+    background-color: rgba(126, 196, 253, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Highlights Section */
+  .highlight-section {
+    padding: 4rem 0;
+  }
+  
+  .section-header {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+  }
+  
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .highlight-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--accent-blue);
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .highlight-card i {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+  }
+  
+  .highlight-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Experience Section */
+  .experience-section {
+    padding: 4rem 0;
+  }
+  
+  .experience-item {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+  }
+  
+  .company {
+    color: var(--accent-blue);
+    font-weight: 600;
+  }
+  
+  .date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  .experience-details {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .experience-details li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tech-used {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-used span {
+    background-color: rgba(126, 196, 253, 0.1);
+    color: var(--accent-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+  
+  /* Projects Section */
+  .projects-section {
+    padding: 4rem 0;
+  }
+  
+  .project-item {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-date {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .project-tech {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .project-tech span {
+    background-color: rgba(126, 196, 253, 0.1);
+    color: var(--accent-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+  
+  /* Education Section */
+  .education-section {
+    padding: 4rem 0;
+  }
+  
+  .education-item {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .education-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .degree, .minors, .gpa {
+    margin-bottom: 0.5rem;
+  }
+  
+  .relevant-coursework {
+    margin-top: 1rem;
+    color: var(--text-light);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--card-bg);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-links a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-blue);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero-content {
+      gap: 3rem;
+    }
+    
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    main, header {
+      padding: 0 1.5rem;
+    }
+    
+    .hero-content {
+      flex-direction: column;
+    }
+    
+    .text-content {
+      text-align: center;
+    }
+    
+    .about-me {
+      margin: 0 auto 2rem;
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+    
+    .stats-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%;
+    }
+    
+    .stat-item {
+      flex: 1 1 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    main, header {
+      padding: 0 1.25rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+    
+    nav {
+      gap: 1rem;
+    }
+  }
+
+  .highlight-card i.fa-hands-helping {
+    color: var(--accent-blue);
+  }
+  
+  .project-details {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-details li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+  }
